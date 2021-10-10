@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,18 +7,18 @@
     tools:context="MainActivity">
 
     <Button
-        android:id="@+id/btn"
+        android:id="@+id/button_toast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="toast"
-        android:text="@string/btn"
+        android:text="@string/toast"
         android:textColor="@android:color/white" />
 
     <TextView
-        android:id="@+id/textview"
+        android:id="@+id/show_count"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -30,7 +30,8 @@
         android:text="@string/_0"
         android:textSize="160sp"
         android:textStyle="bold"
-        android:layout_weight="1"/>
+        android:layout_below="@+id/button_toast"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/button_count"
@@ -41,5 +42,7 @@
         android:layout_marginStart="8dp"
         android:onClick="count"
         android:text="@string/count"
-        android:textColor="@android:color/white" />
-</LinearLayout>
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/show_count"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
